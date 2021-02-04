@@ -8,8 +8,8 @@
 
 int main(void)
 {
-    char quote[] = {"with proper grammar, but the outcome is a piece of art,"};
+	char quote[] = {"with proper grammar, but the outcome is a piece of art,"};
 
-    printf("%s\n", quote);
-    return (0);
+	printf("%s\n", quote);
+	return (0);
 }
