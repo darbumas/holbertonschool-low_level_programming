@@ -2,8 +2,8 @@
 
 /**
  * add - ƒ() adds two integers
- * @x, @y: arguments of type int
- *
+ * @y: input value (parameter of type int)
+ * @x: input value (parameter of type int)
  * Return: result of addition
  */
 
