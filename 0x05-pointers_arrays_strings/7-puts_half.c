@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- puts_half - ƒ() prints half of a string,
+ * puts_half - ƒ() prints half of a string,
  * followed by a new line.
  * @str: pointer to a char (base index of string).
  * Return: void.
