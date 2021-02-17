@@ -1,8 +1,7 @@
 #include "holberton.h"
 
-int _strlen(char *);
 /**
- * puts_half - ƒ() prints half of a string,
+ puts_half - ƒ() prints half of a string,
  * followed by a new line.
  * @str: pointer to a char (base index of string).
  * Return: void.
@@ -10,13 +9,13 @@ int _strlen(char *);
 void puts_half(char *str)
 {
 	int str_len = _strlen(str);
-	int n;
+	int n, i;
 
 	if ((str_len % 2) == 0)
 		n = str_len / 2;
 	else
 		n = str_len - ((str_len - 1) / 2);
-	int i = n;
+	i = n;
 
 	while (i < str_len)
 	{
