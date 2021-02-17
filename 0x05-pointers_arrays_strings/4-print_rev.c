@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_reserve - ƒ() prints a string in reverse,
+ * print_rev - ƒ() prints a string in reverse,
  * followed by a new line.
  * @s: pointer to a char (string).
  * Return: void
