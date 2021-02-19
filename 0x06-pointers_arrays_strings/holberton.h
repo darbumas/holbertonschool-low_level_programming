@@ -10,6 +10,7 @@ void reverse_array(int *, int);
 char *string_toupper(char *);
 int _strlen(char *);
 char *cap_string(char *);
+char *leet(char *);
 char *rot13(char *);
 
 #endif /* holberton.h */
