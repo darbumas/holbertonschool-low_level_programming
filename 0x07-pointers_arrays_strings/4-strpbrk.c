@@ -17,6 +17,8 @@ char *_strpbrk(char *s, char *accept)
 			if (s[i] == accept[yes])
 				return (s + i);
 		}
+		if (!*s)
+			break;
 	}
 	return (0);
 }
