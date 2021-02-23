@@ -13,13 +13,14 @@ unsigned int _strspn(char *s, char *accept)
 	int yes, i, count = 0;
 
 	i = 0;
-	while (s[++i])
+	while ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 	{
 		for (yes = 0; accept[yes] != '\0'; yes++)
 		{
 			if (s[i] == accept[yes])
 				count++;
 		}
+		i++;
 	}
-	return (count - 1);
+	return (count);
 }
