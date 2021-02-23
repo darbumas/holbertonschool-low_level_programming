@@ -8,17 +8,15 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int yes, i = 1;
+	int yes, i = 0;
 
 	while (s[i++])
 	{
-		for (yes = 0; accept[yes] != '0'; yes++)
+		for (yes = 0; accept[yes] != '\0'; yes++)
 		{
 			if (s[i] == accept[yes])
 				return (s + i);
 		}
-		if (!*s)
-			return (0);
 	}
 	return (0);
 }
