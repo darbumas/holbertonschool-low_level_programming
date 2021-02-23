@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _memset - f() returns a pointer to a memory address,
- * filled with constant byte.
+ * _memset - ƒ() returns a pointer to a memory address,
+ * filled with a constant byte.
  * @s: pointer to mem area.
  * @b: constant byte to fill mem (type char).
  * @n: size of memory area to be filled (given in n bytes)
