@@ -13,8 +13,7 @@ void _puts_recursion(char *s)
 	{
 	/* split the problem into two; print the first char of string */
 		_putchar(*s);
-	/* then recursive call, using the above solution to resolve the rest of
-	 * problem */
+	/* then recursive call, resolve the rest of problem */
 		_puts_recursion(s + 1);
 		s++;
 	}
