@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		else if (cents >= nickel)
 			cents = cents - nickel;
 		else if (cents >= penny)
-			cents = cents - penny;
+			cents = cents - penny - 1;
 		coins++;
 	}
 	printf("%d\n", coins);
