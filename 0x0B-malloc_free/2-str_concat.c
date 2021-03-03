@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * find_length - returns the length of string.
+ * find_length - helper ƒ() returns the length of string.
  * @string: pointer to string.
  * Return: length of string.
  */
@@ -21,26 +21,29 @@ int find_length(char *string)
 char *str_concat(char *s1, char *s2)
 {
 	char *nms;
-	int s1_len = 0, s2_len = 0, newSpace = 0, i = 0;
+	int s1_len, s2_len, indx1, indx2, newSpace;
 
-	if (s1 || s2)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	s1_len = find_length(s1);
+	s2_len = find_length(s2);
+
+	nms = malloc(sizeof(char) * (s1_len + s2_len + 1));
+
+	if (nms != NULL)
 	{
-		s1_len = find_length(s1);
-		s2_len = find_length(s2);
+		newSpace = 0;
+		indx1 = 0;
+		while (indx1 < s1_len)
+			nms[newSpace++] = s1[indx1++];
+		indx2 = 0;
+		while (indx2 < s2_len)
+			nms[newSpace++] = s2[indx2++];
+		nms[newSpace] = '\0';
+		return (nms);
 	}
-	newSpace = s1_len + s2_len + 1;
-	nms = malloc(newSpace * sizeof(char));
-
-	if (!nms)
+	else
 		return (NULL);
-	while (i < newSpace)
-	{
-		if (i < s1_len)
-			nms[i] = s1[i];
-		else if (i >= s1_len && i < newSpace)
-			nms[i] = s2[i - s1_len];
-		i++;
-	}
-	nms[i] = '\0';
-	return (nms);
 }
