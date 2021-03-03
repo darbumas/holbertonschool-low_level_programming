@@ -22,6 +22,7 @@ char *_strdup(char *str)
 	if (ptr == NULL)
 		return (NULL);
 
+	indx1++;
 	indx2 = 0;
 	while (indx2 <= indx1)
 	{
