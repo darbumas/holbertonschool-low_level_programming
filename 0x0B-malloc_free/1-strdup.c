@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strdup - ƒ() returns a pointer from malloc; which is a string..
- * @str: pointer to a char (string in buffer).
+ * _strdup - ƒ() returns a pointer from malloc; which is a copy of string..
+ * @str: pointer to a char (string in buffer to copy).
  *
- * Return: pointer.
+ * Return: pointer to new space in memory; or NULL.
  */
 char *_strdup(char *str)
 {
@@ -18,7 +18,6 @@ char *_strdup(char *str)
 	while (str[indx1])
 		indx1++;
 
-	indx1++;
 	ptr = malloc(indx1 * (sizeof(char)));
 	if (ptr == NULL)
 		return (NULL);
