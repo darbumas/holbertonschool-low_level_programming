@@ -12,5 +12,8 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
-
+int word_count(char *, int);
+char *copyMem(char *dest, char *src, unsigned int);
+char *goat(char *, int *);
+void free_list(char **list, int n);
 #endif
