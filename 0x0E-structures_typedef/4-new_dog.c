@@ -11,22 +11,24 @@ char *_strdup(char *str)
 	char *ptr;
 	unsigned int indx1 = 0, indx2 = 0;
 
-	if (str == 0)
+	if (str == NULL)
 		return (NULL);
-	while (str[indx1])
+	while (str[indx1] != '\0')
 		indx1++;
 	indx1++;
 	ptr = malloc(indx1 * (sizeof(char)));
-	if (ptr == NULL)
+	if (ptr != NULL)
 	{
+		while (indx2 <= indx1)
+		{
+			ptr[indx2] = str[indx2];
+			indx2++;
+		}
+		ptr[indx2] = '\0';
+		return (ptr);
+	}
+	else
 		return (NULL);
-	}
-	while (indx2 <= indx1)
-	{
-		ptr[indx2] = str[indx2];
-		indx2++;
-	}
-	return (ptr);
 }
 /**
  * new_dog - ƒ() returns a pointer to a struct; creates a new dog.
@@ -37,9 +39,8 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *newDog;
+	struct dog *newDog = malloc(sizeof(struct dog));
 
-	newDog = malloc(sizeof(struct dog));
 	if (newDog == NULL)
 	{
 		return (NULL);
