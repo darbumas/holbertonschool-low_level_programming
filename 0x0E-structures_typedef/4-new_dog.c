@@ -37,27 +37,27 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *newDog;
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
-		return (NULL);
-	new_dog->name = _strdup(name);
-	if (new_dog->name == NULL)
+	newDog = malloc(sizeof(dog_t));
+	if (newDog == NULL)
 	{
-		free(new_dog);
+		free(newDog);
 		return (NULL);
 	}
-	new_dog->age = age;
-	new_dog->owner = _strdup(owner);
-	if (new_dog->owner == NULL)
+	newDog->name = _strdup(name);
+	if (newDog->name == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog);
+		free(newDog);
 		return (NULL);
 	}
-	free(new_dog->name);
-	free(new_dog->owner);
-	free(new_dog);
-	return (new_dog);
+	newDog->age = age;
+	newDog->owner = _strdup(owner);
+	if (newDog->owner == NULL)
+	{
+		free(newDog->name);
+		free(newDog);
+		return (NULL);
+	}
+	return (newDog);
 }
