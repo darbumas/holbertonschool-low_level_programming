@@ -19,7 +19,6 @@ char *_strdup(char *str)
 	ptr = malloc(indx1 * (sizeof(char)));
 	if (ptr == NULL)
 	{
-		free(ptr);
 		return (NULL);
 	}
 	while (indx2 <= indx1)
@@ -54,7 +53,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog->owner == NULL)
 	{
 		free(new_dog->name);
-		free(new_dog->owner);
 		free(new_dog);
 		return (NULL);
 	}
