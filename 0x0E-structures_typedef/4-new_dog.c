@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int indx1 = 0, indx2 = 0;
+	unsigned int indx1 = 0, indx2 = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -38,7 +38,7 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *newDog = malloc(sizeof(struct dog));
+	dog_t *newDog = malloc(sizeof(struct dog));
 
 	if (newDog == NULL)
 	{
