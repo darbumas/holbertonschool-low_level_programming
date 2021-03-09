@@ -1,11 +1,14 @@
-#ifndef MY_DOG_H_
-#define MY_DOG_H_
+#ifndef DOG_H_
+#define DOG_H_
 
 /**
  * struct dog - structure with name, owner and age.
  * @name: name of doggie
  * @owner: owner of doggie
  * @age: age of doggie
+ *
+ * Description: struct containing description of doggie with name, owner and
+ * age.
  */
 
 struct dog
