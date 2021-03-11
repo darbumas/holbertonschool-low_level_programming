@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - ƒ() returns void; variadic in nature. Prints numbers;
+ * print_numbers - ƒ() returns void, variadic in nature. Prints numbers;
  * takes a pointer to a const char (string), and an unsigned int
  * number of arguments.
  * @separator: string to print in between numbers.
