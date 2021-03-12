@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - function that prints anything.
+ * print_all - ƒ() that prints anything.
  * @format: list of types of arguments passed to the function.
  * Return: nothing.
  */
@@ -13,12 +13,8 @@ void print_all(const char * const format, ...)
 	int mark = 0, i = 0, flag = 0;
 
 	va_start(type, format); /* initialize argument pointer */
-
-	/* track how many arguments are given to know when to stop */
 	while (format != NULL && format[mark] != '\0')
 		mark++;
-
-	/* treat each argument based on whatever type */
 	while (format != NULL && format[i] != '\0')
 	{
 		switch (format[i++])
