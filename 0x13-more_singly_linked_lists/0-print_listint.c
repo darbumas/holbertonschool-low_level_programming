@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * print_listint - ƒ() returns size of a linked list; prints all members of the
- * linked list.
+ * print_listint - ƒ() returns size of a linked list;
+ * prints all members of the linked list.
  * @h: read-only pointer to the head node.
  * Return: count of nodes.
  */
