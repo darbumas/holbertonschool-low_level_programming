@@ -27,6 +27,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		ref = ref->next;
 		if (ref == NULL)
 			return (fail);
+		i++;
 	}
 	latest = ref->next;
 	ref->next = latest->next;
