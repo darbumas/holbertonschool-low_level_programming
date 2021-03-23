@@ -10,14 +10,13 @@
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *locale;
+	listint_t *locale = malloc(sizeof(listint_t));
 
 	if (head == NULL)
 		return (NULL);
-	locale = malloc(sizeof(listint_t));
-
 	if (locale == NULL)
 		return (NULL);
+
 	locale->n = n;
 	locale->next = *head;
 	*head = locale;
