@@ -10,8 +10,10 @@ size_t print_dlistint_backward(const dlistint_t *h)
 	const dlistint_t *current = h;
 	size_t nodes = 0;
 
-	while (current->next != NULL)
+	while (current != NULL)
 	{
+		if (current->next == NULL)
+			break;
 		current = current->next;
 	}
 	while (current != NULL)
