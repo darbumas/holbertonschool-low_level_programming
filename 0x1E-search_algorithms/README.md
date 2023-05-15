@@ -1,4 +1,4 @@
-#Learning Objectives
+# Learning Objectives
 
 * What is a search algorithm
 * What is a linear search
